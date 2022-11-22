@@ -1,8 +1,8 @@
-﻿using Project1.Bus;
-using Project1.Car;
-using Project1.Truck;
+﻿using Project1.Vehicles.Bus;
+using Project1.Vehicles.Car;
+using Project1.Vehicles.Truck;
 
-namespace Project1.Factories
+namespace Project1.Vehicles.Factories
 {
     public class VolvoFactory : AbstractFactory
     {

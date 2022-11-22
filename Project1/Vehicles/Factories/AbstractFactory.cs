@@ -1,4 +1,4 @@
-﻿namespace Project1.Factories
+﻿namespace Project1.Vehicles.Factories
 {
     public abstract class AbstractFactory
     {

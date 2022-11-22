@@ -1,4 +1,4 @@
-﻿namespace Project1.Bus
+﻿namespace Project1.Vehicles.Bus
 {
     public class BMWBus : Bus
     {

@@ -1,4 +1,4 @@
-﻿namespace Project1
+﻿namespace Project1.Vehicles
 {
     public abstract class Vehicle
     {
