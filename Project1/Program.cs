@@ -1,4 +1,6 @@
-﻿using Project1.Factories;
+﻿using Project1.CarService;
+using Project1.Vehicles.Factories;
+using Project1.Vehicles.Truck;
 
 namespace Project1
 {
@@ -6,11 +8,11 @@ namespace Project1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Testing with the first factory");
-            MakeVehicleSounds(new BMWFactory());
-
-            Console.WriteLine("Testing with the second factory");
+            Console.WriteLine("Testing with the Volvo factory");
             MakeVehicleSounds(new VolvoFactory());
+
+            var bmwTruck = MakeTruckForInspection(new BMWFactory());
+            CarServiceFacade.InspectVehicle(bmwTruck);
         }
 
         private static void MakeVehicleSounds(AbstractFactory factory)
@@ -22,6 +24,12 @@ namespace Project1
             car.MakeCarSound();
             bus.MakeBusSound();
             truck.MakeTruckSound();
+        }
+
+        private static Truck MakeTruckForInspection(AbstractFactory factory)
+        {
+            var truck = factory.CreateTruck();
+            return truck;
         }
     }
 }
