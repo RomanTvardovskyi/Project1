@@ -6,6 +6,7 @@ namespace Project1.CarService
     {
         public static void InspectVehicle(Vehicle vehicle)
         {
+            EngineService.SetEngineType(vehicle);
             EngineService.CheckEngine();
             ChasisService.CheckChasis();
             ElectronicService.CheckElectronic();
